@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.Container {
+    position: relative;
+}
+
+.Container .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Container .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.Container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.Container .card:after{
+    content: 'Jordan';
+    position: absolute;
+    top: 45%;
+    left: -10%;
+    font-size: 6em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255, 0.04);
+}
+.Container .card .image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 225px;
+    transition: 0.5s;
+}
+.Container .card:hover .image {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.Container .card .image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 300px;
+}
+.Container .card .Content { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.Container .card:hover .Content{
+    height: 210px;
+}
+
+.Container .card .Content h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+
+}
+
+.Container .card .Content .Size,
+.Container .card .Content .color
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.Container .card:hover .Content .Size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5;
+}
+.Container .card:hover .Content .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6;
+}
+.Container .card .Content .Size h3,
+.Container .card .Content .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.Container .card .Content .Size span { 
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: white;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Container .card .Content .Size span:hover{
+    background: red;
+}
+.Container .card .Content .color span {
+    width: 20px;
+    height: 20px;
+    background-color: salmon;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.Container .card .Content .color span:nth-child(2) {
+    background-color: red;
+}
+.Container .card .Content .color span:nth-child(3) {
+    background-color: brown;
+}
+.Container .card .Content .color span:nth-child(4) {
+    background-color: blue;
+}
+
+.Container .card .Content a { 
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.Container .card:hover .Content a { 
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay:0.65s ;
+}
+
+/* Tahnks for watching */ 
